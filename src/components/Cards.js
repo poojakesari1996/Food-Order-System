@@ -5,6 +5,9 @@ import Cardsdata from "./CardsData";
 import "./style.css";
 import {useDispatch} from "react-redux"
 import { ADD } from "../redux/actions/Action";
+import { ToastContainer, toast, cssTransition } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Cards = () => {
   const [data, setData] = useState(Cardsdata);
@@ -15,6 +18,8 @@ const Cards = () => {
   const send =(e)=>{
     console.log(e, 'ghdhchd');
     dispatch(ADD(e))
+    toast.success("Item added successfully!");
+
   }
 
   return (
@@ -49,7 +54,10 @@ const Cards = () => {
           );
         })}
       </div>
-    </div>
+      <ToastContainer
+        position="top-center"
+        
+      />    </div>
   );
 };
 

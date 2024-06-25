@@ -100,9 +100,12 @@ const Header = () => {
                                         {
                                             getData.map((e) => (
                                                 <tr key={e.id}>
-                                                    <td>
+                                                    <td className="image-container">
                                                         <NavLink to={`/cart/${e.id}`} onClick={handleClose}>
-                                                            <img src={e.imgdata} alt="" style={{ width: "5rem", height: "5rem" }} />
+                                                        <div className="image-wrapper">
+                                                                <img src={e.imgdata} alt="" />
+                                                                <button className="overlay-button">Click Me</button>
+                                                            </div>
                                                         </NavLink>
                                                     </td>
                                                     <td>

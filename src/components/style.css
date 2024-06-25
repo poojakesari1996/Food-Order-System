@@ -65,3 +65,35 @@
       }
       
   }
+
+  /* style.css */
+
+.image-container {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 5rem; /* Adjust as needed */
+    height: 5rem; /* Adjust as needed */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
